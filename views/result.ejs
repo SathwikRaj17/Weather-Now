@@ -1,0 +1,27 @@
+<!-- rain.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/result.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap">
+</head>
+<body>
+   <video loop muted autoplay playsinline class="background">
+        <source src="./resources/<%= path %>" type="video/mp4">
+   </video>
+   <div class="container">
+        <h1 class="temp"><%= temp %><span id="degree">°</span>c</h1>
+        <div class="temp_info">
+            <h3>min temperature : <%= min %>° c</h3>
+            <h3>max temperature : <%= max %>° c</h3>
+        </div>
+        <div class="wind_info">
+            <h3>wind speed : <%= speed %> m/s</h3>
+            <h3>flow degree : <%= deg %> deg</h3>
+        </div>
+   </div>
+</body>
+</html>

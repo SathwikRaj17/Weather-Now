@@ -1,0 +1,115 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('/resources/clay-banks-u27Rrbs9Dwc-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(3px);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 120px;
+    margin: auto;
+}
+
+.container
+{
+    display: grid;
+    grid-template-rows: 4fr 5fr;
+    width: 90%;
+}
+
+form
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 10px;
+}
+
+.search
+{
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 90%;
+    max-height:30px ;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    transition: 0.3s;
+}
+
+.submit
+{
+    padding: 10px;
+    max-height: 50px;
+    border-radius: 20px;
+    border: 0;
+    overflow: 0;
+    transition: 0.3s;
+}
+
+.submit:hover
+{
+    color: white;
+    background-color: black;
+}
+
+
+
+@media(max-width:600px)
+{
+    h1
+    {
+        font-size: 80px;
+    }
+    form
+    {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 20px;
+        gap: 10px;
+    }
+    .search
+    {
+        height: 100%;
+        padding: 15px;
+        padding-bottom: 15px;
+        margin-bottom:20px;
+    }
+    .submit
+    {
+        min-width: 30%;
+        min-height: 10%;
+        max-height: 15%;
+        max-width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        transition: 0.3s;
+    }
+    .submit:click
+    {
+        color: white;
+        background: black;
+    }
+    .container
+    {
+    display: grid;
+    grid-template-rows: 3fr 5fr;
+    width: 90%;
+    }
+}
