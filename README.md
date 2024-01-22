@@ -1,5 +1,3 @@
 <h1>Weather details</h1>
 
-<ul>
-<l1>Shows Current weather<li>
-</ul>
+<h3>It uses openweathermap api to fetch the current weather conditions</h3>
