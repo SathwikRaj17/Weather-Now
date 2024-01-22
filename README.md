@@ -12,13 +12,19 @@
   </li>
   <li>
     <h4>Dynamic Backgrounds:</h4>
-    <p>The project enhances user experience by dynamically changing the background to reflect the current weather conditions. Whether it's raining, clear skies, or overcast, the background adapts to create an immersive and visually appealing interface.</p>
+    <p>The project enhances user experience by dynamically changing the background to reflect the current weather conditions. Whether it's raining, clear skies, or overcast, the     background adapts to create an immersive and visually appealing interface.</p>
   </li>
-   <li><h4>Day/Night Adaptability:</h4>
-  <p> WeatherNow intelligently adjusts its background based on the time of day.</p>
+  <li>
+    <h4>Day/Night Adaptability:</h4>
+    <p> WeatherNow intelligently adjusts its background based on the time of day.</p>
   </li>
-   <li><h4>User-Friendly Interface:</h4>
-  <p>The project features a clean and intuitive user interface, making it easy for users to navigate through weather information and enjoy a visually captivating display.</p>
+  <li>
+    <h4>User-Friendly Interface:</h4>
+    <p>The project features a clean and intuitive user interface, making it easy for users to navigate through weather information and enjoy a visually captivating display.</p>
+  </li>
+  <li>
+    <h4>UI Responsiveness:</h4>
+    <p>Designed with a responsive UI, WeatherNow ensures a smooth and consistent user experience across various devices, including desktops, tablets, and mobile phones.</p>
   </li>
 </ol>
 <h3>Description:</h3>
