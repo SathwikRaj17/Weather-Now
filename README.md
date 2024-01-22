@@ -21,5 +21,5 @@
   <p>The project features a clean and intuitive user interface, making it easy for users to navigate through weather information and enjoy a visually captivating display.</p>
   </li>
 </ol>
-<h5>Description:</h5>
+<h3>Description:</h3>
 <p>WeatherNow is a versatile and visually appealing project designed to fetch real-time weather data from OpenWeatherMap API and provide users with a comprehensive view of current weather conditions. This project not only offers essential weather information like wind conditions, minimum and maximum temperatures but also adds an immersive touch by dynamically changing the background based on the weather conditions</p>
