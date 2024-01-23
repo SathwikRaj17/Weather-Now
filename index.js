@@ -42,22 +42,22 @@ function pt(condition)
         const path="rainy-day.mp4"
         return path;
     }
-    else if(condition == "Clear" && time<18)
+    else if(condition =="Clear" && time<18)
     {
         const path="clear-day.mp4"
         return path
     }
-    else if(condition == "Clear" && time>18)
+    else if(condition =="Clear" && time>=18)
     {
         const path="clear-night.mp4"
         return path
     }
-    else if(condition == "Rain" && time>18)
+    else if(condition == "Rain" && time>=18)
     {
         const path="rainy-night.mp4"
         return path
     }
-    else if(time>18)
+    else if(time>=18)
     {
         const path="night.mp4"
         return path
