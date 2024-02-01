@@ -1,7 +1,7 @@
 {
   "name": "weather",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h1>WeatherNow - A Dynamic Weather Display Project</h1>",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -17,5 +17,6 @@
     "express": "^4.18.2",
     "path": "^0.12.7",
     "url": "^0.11.3"
-  }
+  },
+  "devDependencies": {}
 }
