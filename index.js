@@ -15,10 +15,18 @@ app.set('view engine', 'ejs');
 env.config();
 
 async function fetchd(location) {
-    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.apiid}`);
-    const data = await res.json();
-    console.log(data.weather[0].main)
-    return data;
+    try {
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.apiid}`);
+        const data = await res.json();
+        if (!data.weather || data.weather.length === 0) {
+            throw new Error('Weather data not found');
+        }
+        console.log(data.weather[0].main);
+        return data;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
 }
 
 app.listen(port, function (req, res) {
