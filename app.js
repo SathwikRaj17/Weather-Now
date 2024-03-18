@@ -4,10 +4,10 @@ import { fileURLToPath } from "url"
 import bodyparser from "body-parser"
 import env from "dotenv"
 const app=express();
-const port=3000;
+const port=process.env.PORT || 3000;
 const pth=dirname(fileURLToPath(import.meta.url));
 const d=new Date();
-
+console.log(process.env.PORT)
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static("public"))
 app.set('view engine','ejs')
