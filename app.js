@@ -3,15 +3,15 @@ import { dirname } from "path"
 import { fileURLToPath } from "url"
 import bodyparser from "body-parser"
 import env from "dotenv"
+env.config();
 const app=express();
 const port=process.env.PORT || 3000;
 const pth=dirname(fileURLToPath(import.meta.url));
 const d=new Date();
-console.log(process.env.PORT)
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static("public"))
 app.set('view engine','ejs')
-env.config();
+
 
 async function fetchd(location)
 {
@@ -74,8 +74,7 @@ app.post("/search",async function(req,res)
     try {
         const location=req.body.location;
         const resp=await fetchd(location);
-        const condition=await(resp.weather[0].main);
-        console.log(resp.name)
+        const condition=resp.weather[0].main;
         const data={
             temp:resp.main.temp,
             min:resp.main.temp_min,
