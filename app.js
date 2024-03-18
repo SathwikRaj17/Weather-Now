@@ -69,23 +69,31 @@ function pt(condition)
     }
 }
 
-app.post("/search",async function(req,res)
-{
+app.post("/search", async function (req, res) {
     try {
-        const location=req.body.location;
-        const resp=await fetchd(location);
-        const condition=resp.weather[0].main;
-        const data={
-            temp:resp.main.temp,
-            min:resp.main.temp_min,
-            max:resp.main.temp_max,
-            speed:resp.wind.speed,
-            deg:resp.wind.deg,
-            path:pt(condition)
+        const location = req.body.location;
+        const resp = await fetchd(location);
+
+        if (!resp.weather || resp.weather.length === 0) {
+            throw new Error("Weather data not found");
         }
-        res.render("result.ejs",data);
+
+        const condition = resp.weather[0].main;
+        console.log(resp.weather[0]);
+
+        const data = {
+            temp: resp.main.temp,
+            min: resp.main.temp_min,
+            max: resp.main.temp_max,
+            speed: resp.wind.speed,
+            deg: resp.wind.deg,
+            path: pt(condition)
+        };
+
+        res.render("result.ejs", data);
     } catch (error) {
         console.error(error);
-        res.sendFile(pth+"/public/index.html");
+        res.sendFile(pth + "/public/index.html");
     }
-})
+});
+)
