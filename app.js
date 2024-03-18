@@ -96,4 +96,3 @@ app.post("/search", async function (req, res) {
         res.sendFile(pth + "/public/index.html");
     }
 });
-)
