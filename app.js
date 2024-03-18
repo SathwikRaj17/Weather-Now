@@ -76,7 +76,7 @@ app.post("/search", async function (req, res) {
 
         if (!resp.weather || resp.weather.length === 0) {
             console.error("Weather data not found in response:", resp);
-            res.send("Error of 0")
+            res.send(resp.weather.length)
             throw new Error("Weather data not found");
         }
 
