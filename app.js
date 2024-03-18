@@ -75,11 +75,12 @@ app.post("/search", async function (req, res) {
         const resp = await fetchd(location);
 
         if (!resp.weather || resp.weather.length === 0) {
+            console.error("Weather data not found in response:", resp);
+            res.send("Error of 0")
             throw new Error("Weather data not found");
         }
 
         const condition = resp.weather[0].main;
-        console.log(resp.weather[0]);
 
         const data = {
             temp: resp.main.temp,
